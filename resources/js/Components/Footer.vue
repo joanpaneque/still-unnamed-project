@@ -3,9 +3,9 @@
     <div class="container mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-8">
         <div>
-          <div class="text-2xl font-bold mb-4">VoiceGen</div>
-          <p class="text-gray-400">
-            Professional TTS for smart creators.
+          <div class="text-2xl font-bold mb-4">Amulet Voice</div>
+          <p class="text-gray-600 mb-6">
+            Professional voice synthesis for smart creators.
           </p>
         </div>
 
@@ -39,7 +39,7 @@
       </div>
 
       <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-        <p>&copy; 2024 VoiceGen. All rights reserved.</p>
+        <p>&copy; 2025 Amulet Voice. All rights reserved.</p>
       </div>
     </div>
   </footer>

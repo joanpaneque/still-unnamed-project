@@ -7,10 +7,10 @@
 
       <div class="max-w-3xl mx-auto space-y-6">
         <div class="bg-white border rounded-lg p-6">
-          <h3 class="font-semibold mb-3">When will VoiceGen launch?</h3>
+          <h3 class="font-semibold mb-3">When will Amulet Voice launch?</h3>
           <p class="text-gray-600">
-            We're launching in March 2024 with limited beta access. Priority users get instant access,
-            while free waitlist members get access within 2-4 weeks of launch.
+            We're launching in September 2025 with limited beta access. Priority users get instant access,
+            while free waitlist members get access within 4-6 weeks of launch.
           </p>
         </div>
 
@@ -23,18 +23,18 @@
         </div>
 
         <div class="bg-white border rounded-lg p-6">
-          <h3 class="font-semibold mb-3">Does it really sound as good as ElevenLabs?</h3>
+          <h3 class="font-semibold mb-3">Does it really sound as good as ElevenLabs, Play.ht, Murf, and other competitors?</h3>
           <p class="text-gray-600">
             Yes, we've done A/B tests with hundreds of users and 87% can't tell
-            the difference. The quality is practically identical for most use cases.
+            the difference. The quality is practically identical for most use cases compared to ElevenLabs, Play.ht, Murf, LMNT, and other leading platforms.
           </p>
         </div>
 
         <div class="bg-white border rounded-lg p-6">
           <h3 class="font-semibold mb-3">How much will it cost after launch?</h3>
           <p class="text-gray-600">
-            $0.15 per 1,000 characters with no monthly fees. That's about $1.50 for a 10-minute video
-            and roughly $15/month for regular YouTubers - still 80% cheaper than competitors.
+            $0.0167 per 1,000 characters with no monthly fees. That's about $0.16 for a 10-minute video
+            and roughly $3/month for regular creators (3-4 videos/week) - still 80% cheaper than competitors.
           </p>
         </div>
 

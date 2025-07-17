@@ -18,7 +18,7 @@
       </div>
 
       <p class="mt-6 text-sm opacity-75">
-        ✓ Be first to save 80% on TTS ✓ Priority support ✓ Double your credits
+        ✓ Be first to save 80% with Amulet Voice ✓ Priority support ✓ Double your credits
       </p>
     </div>
   </section>

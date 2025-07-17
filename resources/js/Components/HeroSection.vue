@@ -81,7 +81,8 @@ const languages = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
   { code: 'es', name: 'Español', flag: '🇪🇸' },
   { code: 'fr', name: 'Français', flag: '🇫🇷' },
-  { code: 'de', name: 'Deutsch', flag: '🇩🇪' }
+  { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+  { code: 'ru', name: 'Русский', flag: '🇷🇺' }
 ]
 
 const voices = {
@@ -187,10 +188,10 @@ const voices = {
   ],
   fr: [
     {
-      id: 'fr-pierre',
-      name: 'Pierre',
+      id: 'fr-antoine',
+      name: 'Antoine',
       description: 'Elegant voice',
-      audioSrc: '/voices/fr/pierre.mp3',
+      audioSrc: '/voices/antoine.mp3',
       gradientFrom: '#ef4444',
       gradientTo: '#dc2626'
     },
@@ -198,91 +199,141 @@ const voices = {
       id: 'fr-claire',
       name: 'Claire',
       description: 'Soft tone',
-      audioSrc: '/voices/fr/claire.mp3',
+      audioSrc: '/voices/claire.mp3',
       gradientFrom: '#f97316',
       gradientTo: '#ea580c'
     },
     {
-      id: 'fr-antoine',
-      name: 'Antoine',
+      id: 'fr-gabriel',
+      name: 'Gabriel',
       description: 'Rich voice',
-      audioSrc: '/voices/fr/antoine.mp3',
+      audioSrc: '/voices/gabriel.mp3',
       gradientFrom: '#84cc16',
       gradientTo: '#65a30d'
     },
     {
-      id: 'fr-marie',
-      name: 'Marie',
+      id: 'fr-isabelle',
+      name: 'Isabelle',
       description: 'Sweet voice',
-      audioSrc: '/voices/fr/marie.mp3',
+      audioSrc: '/voices/isabelle.mp3',
       gradientFrom: '#a855f7',
       gradientTo: '#9333ea'
     },
     {
-      id: 'fr-louis',
-      name: 'Louis',
+      id: 'fr-marc',
+      name: 'Marc',
       description: 'Noble tone',
-      audioSrc: '/voices/fr/louis.mp3',
+      audioSrc: '/voices/marc.mp3',
       gradientFrom: '#6366f1',
       gradientTo: '#4f46e5'
     },
     {
-      id: 'fr-camille',
-      name: 'Camille',
+      id: 'fr-sophie',
+      name: 'Sophie',
       description: 'Gentle voice',
-      audioSrc: '/voices/fr/camille.mp3',
+      audioSrc: '/voices/sophie.mp3',
       gradientFrom: '#ec4899',
       gradientTo: '#be185d'
     }
   ],
   de: [
     {
-      id: 'de-hans',
-      name: 'Hans',
+      id: 'de-sophie',
+      name: 'Sophie',
       description: 'Pro speaker',
-      audioSrc: '/voices/de/hans.mp3',
+      audioSrc: '/voices/sophiebecker.mp3',
       gradientFrom: '#6366f1',
       gradientTo: '#4f46e5'
     },
     {
-      id: 'de-greta',
-      name: 'Greta',
+      id: 'de-lukas',
+      name: 'Lukas',
       description: 'Warm voice',
-      audioSrc: '/voices/de/greta.mp3',
+      audioSrc: '/voices/lukas.mp3',
       gradientFrom: '#14b8a6',
       gradientTo: '#0d9488'
     },
     {
-      id: 'de-klaus',
-      name: 'Klaus',
+      id: 'de-elias',
+      name: 'Elias',
       description: 'Bold tone',
-      audioSrc: '/voices/de/klaus.mp3',
+      audioSrc: '/voices/elias.mp3',
       gradientFrom: '#a855f7',
       gradientTo: '#9333ea'
     },
     {
-      id: 'de-anna',
-      name: 'Anna',
+      id: 'de-lena',
+      name: 'Lena',
       description: 'Clear tone',
-      audioSrc: '/voices/de/anna.mp3',
+      audioSrc: '/voices/lena.mp3',
       gradientFrom: '#f59e0b',
       gradientTo: '#d97706'
     },
     {
-      id: 'de-wilhelm',
-      name: 'Wilhelm',
+      id: 'de-clara',
+      name: 'Clara',
       description: 'Strong voice',
-      audioSrc: '/voices/de/wilhelm.mp3',
+      audioSrc: '/voices/clara.mp3',
       gradientFrom: '#10b981',
       gradientTo: '#059669'
     },
     {
-      id: 'de-ingrid',
-      name: 'Ingrid',
+      id: 'de-jonas',
+      name: 'Jonas',
       description: 'Smooth tone',
-      audioSrc: '/voices/de/ingrid.mp3',
+      audioSrc: '/voices/jonas.mp3',
       gradientFrom: '#ef4444',
       gradientTo: '#dc2626'
+    }
+  ],
+  ru: [
+    {
+      id: 'ru-andrei',
+      name: 'Andrei',
+      description: 'Pro speaker',
+      audioSrc: '/voices/andrei.mp3',
+      gradientFrom: '#fbbf24',
+      gradientTo: '#f59e0b'
+    },
+    {
+      id: 'ru-dmitriy',
+      name: 'Dmitriy',
+      description: 'Deep voice',
+      audioSrc: '/voices/dmitriy.mp3',
+      gradientFrom: '#fb7185',
+      gradientTo: '#f43f5e'
+    },
+    {
+      id: 'ru-ekaterina',
+      name: 'Ekaterina',
+      description: 'Elegant tone',
+      audioSrc: '/voices/ekaterina.mp3',
+      gradientFrom: '#34d399',
+      gradientTo: '#10b981'
+    },
+    {
+      id: 'ru-ivan',
+      name: 'Ivan',
+      description: 'Strong voice',
+      audioSrc: '/voices/ivan.mp3',
+      gradientFrom: '#60a5fa',
+      gradientTo: '#3b82f6'
+    },
+    {
+      id: 'ru-natalia',
+      name: 'Natalia',
+      description: 'Warm tone',
+      audioSrc: '/voices/natalia.mp3',
+      gradientFrom: '#c084fc',
+      gradientTo: '#a855f7'
+    },
+    {
+      id: 'ru-olga',
+      name: 'Olga',
+      description: 'Soft voice',
+      audioSrc: '/voices/olga.mp3',
+      gradientFrom: '#22d3ee',
+      gradientTo: '#06b6d4'
     }
   ]
 }

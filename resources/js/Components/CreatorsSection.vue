@@ -1,12 +1,12 @@
 <template>
   <section class="py-20">
     <div class="container mx-auto px-6">
-      <div class="max-w-4xl mx-auto">
+      <div class="max-w-6xl mx-auto">
         <h2 class="text-3xl font-bold mb-12 text-center">
           Perfect for creators like you
         </h2>
 
-        <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="grid md:grid-cols-3 gap-12 items-start">
           <div>
             <h3 class="text-2xl font-semibold mb-6">YouTubers</h3>
             <ul class="space-y-4 text-gray-600">
@@ -39,6 +39,24 @@
               <li class="flex items-start">
                 <span class="text-green-500 mr-3">✓</span>
                 Experiment with different voices
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-2xl font-semibold mb-6">AI automation</h3>
+            <ul class="space-y-4 text-gray-600">
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3">✓</span>
+                Generate voice content at scale
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3">✓</span>
+                Automate audio production workflows
+              </li>
+              <li class="flex items-start">
+                <span class="text-green-500 mr-3">✓</span>
+                Create personalized voice messages
               </li>
             </ul>
           </div>
