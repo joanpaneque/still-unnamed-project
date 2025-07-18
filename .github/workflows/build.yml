@@ -1,4 +1,4 @@
-name: laravel-build
+name: ci-build-amulet-voice
 on:
   push:
     branches:
