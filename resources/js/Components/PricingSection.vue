@@ -1,3 +1,47 @@
+<script setup>
+import { ref, computed } from 'vue'
+import { usePage } from '@inertiajs/vue3'
+
+const page = usePage()
+
+const priorityQueueUsers = page.props.priorityQueueUsers
+const freeAccessUsers = page.props.freeAccessUsers
+
+// Reactive data for sliders
+const minutesPerVideo = ref(10)
+const videosPerMonth = ref(16)
+
+// Pricing constants
+const PRICE_PER_1000_CHARS = 0.0167
+const CHARS_PER_MINUTE = 1000
+
+// Computed properties for calculations
+const costPerVideo = computed(() => {
+  const totalChars = minutesPerVideo.value * CHARS_PER_MINUTE
+  const cost = (totalChars / 1000) * PRICE_PER_1000_CHARS
+  return cost.toFixed(4)
+})
+
+const totalMonthlyCost = computed(() => {
+  const monthlyCost = parseFloat(costPerVideo.value) * videosPerMonth.value
+  return monthlyCost.toFixed(2)
+})
+
+// Computed property for formatted duration
+const formattedDuration = computed(() => {
+  const hours = Math.floor(minutesPerVideo.value / 60)
+  const minutes = minutesPerVideo.value % 60
+
+  if (hours === 0) {
+    return `${minutes}m`
+  } else if (minutes === 0) {
+    return `${hours}h`
+  } else {
+    return `${hours}h ${minutes}m`
+  }
+})
+</script>
+
 <template>
   <section id="pricing" class="bg-gray-50 py-20">
     <div class="container mx-auto px-6">
@@ -46,20 +90,27 @@
 
           <div class="text-center">
             <p class="text-sm text-gray-500">
-              <span class="font-semibold text-orange-600">847</span> people in queue
+              <span class="font-semibold text-orange-600">{{ freeAccessUsers }}</span> people in queue
             </p>
           </div>
         </div>
 
         <!-- Priority Access -->
-        <div class="bg-white rounded-2xl p-8 border-2 border-blue-500 relative">
-          <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm">
+        <div class="bg-white rounded-2xl p-8 border-2 border-blue-500 relative transition-all duration-500 transform hover:scale-105 hover:-translate-y-4 hover:rotate-1 hover:shadow-2xl hover:shadow-blue-500/25 group cursor-pointer" style="transform-style: preserve-3d;">
+          <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-blue-500 text-white px-4 py-1 rounded-full text-sm group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-purple-600 transition-all duration-300">
             Skip the line
           </div>
 
+          <!-- Glow background effect -->
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-400/10 to-purple-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10"></div>
+
           <div class="text-center mb-6">
             <h3 class="text-2xl font-semibold mb-2">Priority Access</h3>
-            <div class="text-4xl font-bold text-gray-900 mb-2">$5</div>
+            <div class="flex items-center justify-center gap-3 mb-2">
+              <span class="text-2xl text-gray-400 line-through">$10</span>
+              <span class="text-4xl font-bold text-gray-900">$5</span>
+              <span class="bg-red-500 text-white px-2 py-1 rounded-full text-sm font-semibold">50% OFF</span>
+            </div>
             <p class="text-gray-600">Get immediate access at launch</p>
           </div>
 
@@ -86,13 +137,17 @@
             </li>
           </ul>
 
-          <button class="w-full bg-blue-600 text-white py-4 rounded-lg text-lg font-semibold hover:bg-blue-700 mb-4">
-            Get priority access
+          <button class="relative w-full bg-blue-600 text-white py-4 rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/50 hover:bg-gradient-to-r hover:from-blue-500 hover:via-indigo-600 hover:to-purple-600 overflow-hidden group mb-4">
+            <span class="relative z-10">Get priority access</span>
+            <!-- Efecto shimmer -->
+            <div class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12"></div>
+            <!-- Glow effect -->
+            <div class="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-400 to-purple-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl"></div>
           </button>
 
           <div class="text-center">
             <p class="text-sm text-gray-500">
-              <span class="font-semibold text-green-600">127</span> priority spots secured
+              <span class="font-semibold text-green-600">{{ priorityQueueUsers }}</span> priority spots secured
             </p>
           </div>
         </div>
@@ -219,44 +274,6 @@
     </div>
   </section>
 </template>
-
-<script setup>
-import { ref, computed } from 'vue'
-
-// Reactive data for sliders
-const minutesPerVideo = ref(10)
-const videosPerMonth = ref(16)
-
-// Pricing constants
-const PRICE_PER_1000_CHARS = 0.0167
-const CHARS_PER_MINUTE = 1000
-
-// Computed properties for calculations
-const costPerVideo = computed(() => {
-  const totalChars = minutesPerVideo.value * CHARS_PER_MINUTE
-  const cost = (totalChars / 1000) * PRICE_PER_1000_CHARS
-  return cost.toFixed(4)
-})
-
-const totalMonthlyCost = computed(() => {
-  const monthlyCost = parseFloat(costPerVideo.value) * videosPerMonth.value
-  return monthlyCost.toFixed(2)
-})
-
-// Computed property for formatted duration
-const formattedDuration = computed(() => {
-  const hours = Math.floor(minutesPerVideo.value / 60)
-  const minutes = minutesPerVideo.value % 60
-
-  if (hours === 0) {
-    return `${minutes}m`
-  } else if (minutes === 0) {
-    return `${hours}h`
-  } else {
-    return `${hours}h ${minutes}m`
-  }
-})
-</script>
 
 <style scoped>
 /* Custom slider styling */

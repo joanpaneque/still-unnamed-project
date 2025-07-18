@@ -1,9 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
+use App\Http\Controllers\IndexController;
 
-// Boilerplate page
-Route::get('/', function () {
-    return Inertia::render('Index');
-});
+Route::get('/', [IndexController::class, 'index']);
